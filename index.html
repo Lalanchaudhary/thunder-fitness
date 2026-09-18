@@ -19,6 +19,25 @@
 
   gtag('config', 'AW-18142441785');
 </script>
+<!-- Event snippet for Outbound click conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18445391370/ZF_zCOHAu_QcEIqsudtE',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 </head>
 <body>
 <header class="nav" id="top"><a class="brand" href="#top"><span></span>THUNDER <em>FITNESS</em></a><button class="menu" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button><nav><a href="#top">Home</a><a href="#about">About</a><a href="#programs">Programs</a><a href="#facilities">Facilities</a><a href="#trainers">Trainers</a><a href="#membership">Membership</a><a href="#contact">Contact</a></nav><a class="button nav-cta" href="https://wa.me/917250370955?text=I%20WANT%20ID%20HERE..">Join Now <i class="fa-brands fa-whatsapp"></i></a></header>
